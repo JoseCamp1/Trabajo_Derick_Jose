@@ -36,3 +36,4 @@ test/unit/working/
 dist/
 nblibraries.properties
 .nb-gradle/
+/ProyectoColaborativo/nbproject/private/

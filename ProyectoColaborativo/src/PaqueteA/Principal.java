@@ -4,19 +4,17 @@
  */
 package PaqueteA;
 
+import java.awt.Dimension;
 /**
- *
  * @author JoaCa
  */
 public class Principal extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Principal
-     */
     public Principal() {
         initComponents();
+        this.setExtendedState(Principal.MAXIMIZED_BOTH);
+        this.setTitle("Menu Principal");
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,21 +24,85 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        jPopupMenu2 = new javax.swing.JPopupMenu();
+        jPopupMenu3 = new javax.swing.JPopupMenu();
+        jPopupMenu4 = new javax.swing.JPopupMenu();
+        jPopupMenu5 = new javax.swing.JPopupMenu();
+        jSeparator1 = new javax.swing.JSeparator();
+        mdi = new javax.swing.JDesktopPane();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        frmMenu = new javax.swing.JMenu();
+        frmFormulario1 = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        frmSalir = new javax.swing.JMenuItem();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        javax.swing.GroupLayout mdiLayout = new javax.swing.GroupLayout(mdi);
+        mdi.setLayout(mdiLayout);
+        mdiLayout.setHorizontalGroup(
+            mdiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        mdiLayout.setVerticalGroup(
+            mdiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 281, Short.MAX_VALUE)
+        );
+
+        frmMenu.setText("Menu");
+
+        frmFormulario1.setText("Formulario1");
+        frmFormulario1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                frmFormulario1ActionPerformed(evt);
+            }
+        });
+        frmMenu.add(frmFormulario1);
+        frmMenu.add(jSeparator2);
+
+        frmSalir.setText("Salir");
+        frmSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                frmSalirActionPerformed(evt);
+            }
+        });
+        frmMenu.add(frmSalir);
+
+        jMenuBar1.add(frmMenu);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(mdi)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(mdi, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void frmFormulario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_frmFormulario1ActionPerformed
+       frmFormulario1 formularioInterno1 = new frmFormulario1();
+       mdi.add(formularioInterno1);
+       
+         Dimension size = mdi.getSize();
+        
+        Dimension sizeForm = formularioInterno1.getSize();
+        
+        formularioInterno1.setLocation(((int)size.getWidth()-(int)sizeForm.getWidth())/2,((int)size.getHeight()-(int)sizeForm.getHeight())/2);
+       
+       formularioInterno1.show();
+    }//GEN-LAST:event_frmFormulario1ActionPerformed
+
+    private void frmSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_frmSalirActionPerformed
+       this.dispose();
+    }//GEN-LAST:event_frmSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +140,17 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem frmFormulario1;
+    private javax.swing.JMenu frmMenu;
+    private javax.swing.JMenuItem frmSalir;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPopupMenu jPopupMenu1;
+    private javax.swing.JPopupMenu jPopupMenu2;
+    private javax.swing.JPopupMenu jPopupMenu3;
+    private javax.swing.JPopupMenu jPopupMenu4;
+    private javax.swing.JPopupMenu jPopupMenu5;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JDesktopPane mdi;
     // End of variables declaration//GEN-END:variables
 }
